@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Это моя первая страница">
+    <meta name="author" content="Andrey">
+    <meta name="robots" content="all">
+    
+    <meta property="og:title" content="Это моя первая страница">
+    
+    <title>Андрей - Веб-разработчик</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+      <style>
+    body {
+      margin: 0;
+    }
+
+    .preloader {
+      /*фиксированное позиционирование*/
+      position: fixed;
+      /* координаты положения */
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      /* фоновый цвет элемента */
+      background: #e0e0e0;
+      /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+      z-index: 1001;
+    }
+
+    .preloader__row {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      width: 70px;
+      height: 70px;
+      margin-top: -35px;
+      margin-left: -35px;
+      text-align: center;
+      animation: preloader-rotate 2s infinite linear;
+    }
+
+    .preloader__item {
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      background-color: #337ab7;
+      border-radius: 100%;
+      width: 35px;
+      height: 35px;
+      animation: preloader-bounce 2s infinite ease-in-out;
+    }
+
+    .preloader__item:last-child {
+      top: auto;
+      bottom: 0;
+      animation-delay: -1s;
+    }
+
+    @keyframes preloader-rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes preloader-bounce {
+
+      0%,
+      100% {
+        transform: scale(0);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+    }
+
+    .loaded_hiding .preloader {
+      transition: 0.3s opacity;
+      opacity: 0;
+    }
+
+    .loaded .preloader {
+      display: none;
+    }
+  </style>
+</head>
+    
+<body>
+    
+  <div class="preloader">
+    <div class="preloader__row">
+      <div class="preloader__item"></div>
+      <div class="preloader__item"></div>
+    </div>
+  </div>
+
+    
+    <header>
+        <nav>
+            <div class="logo">Андрей Браун</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Обо мне</a></li>
+                    <li><a href="#">Услуги</a> </li>
+                    <li><a href="#">Кейсы</a></li>
+                    <li><a href="#">Прайс</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+    <section class="main">  <div class="title__container">
+        <h1>Привет <br> Я Андрей Браун </h1>
+        <h4>Фулл стек Веб-разработчик</h4>
+        <input type="button" value="Обо мне">
+        <input type="button" value="Мои работы">
+    </div>
+    </section>
+    
+    </main>
+    
+    <div class="about_me"> <div class="about_container">
+        <h2>Обо мне</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis minima accusantium, excepturi expedita autem cum possimus dolores sequi, illum similique assumenda vel suscipit praesentium temporibus numquam sapiente quaerat cupiditate dolore.20</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut alias, minima id laboriosam. Ipsum sint explicabo praesentium similique tenetur sit incidunt, inventore iusto libero quod dolorum sunt ullam delectus possimus quas corporis quibusdam ex voluptatem autem, eum dolor impedit ratione.</p>
+        <input type="button" value="Скачать резюме">
+    </div></div>
+    
+    <div class="my_skills"> <div class="skill_list"> 
+        <h2>Что я умею</h2>
+       <ul>
+        <li> <span>Веб дизайн</span> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, quod!</p></li>
+        <li> <span>Разработка</span> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, consectetur?</p></li>
+        <li> <span>CEO-оптимизация</span> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, perferendis.</p></li>
+        <li> <span>Маркетинг</span> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, reiciendis.</p></li> 
+       </ul>
+    </div></div>
+    
+    <div class="case"> <div class="case_list">
+        <h2>Кейсы</h2>
+        <div class="rep">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, sint.</p>
+        </div>
+        <div class="report">
+            <span><b>Client:</b> <br> Компания </span>
+            <p> <b>website:</b> <br> <a href="http://adwdadsddaw"> http://adwdadsddaw </a> </p>
+            <div class="project">
+                <p> <b>Название проекта</b> </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dolor quisquam enim hic illum suscipit, magni assumenda qui necessitatibus beatae labore sint error, unde id quasi nostrum molestias non dignissimos accusamus ab voluptates provident blanditiis repellendus dolorum. Aliquam, magni aspernatur.</p>
+            </div>
+            <input type="submit" value="visit live site">        
+    </div> </div> </div>
+    
+    <div class="calc"> <div class="calc_title">
+        <h2>Расчет стоимости</h2>
+        
+        <h3>Тип сайта</h3>
+        <select name="list1">
+           <option value="type1" > выберите пункт... </option>   
+           <option value="type2"> type2 </option>
+        </select>
+        
+        <h3>Дизайн</h3>
+        <select name="list2">
+           <option value="dis1"> выберите пункт... </option>    
+           <option value="dis2"> dis2 </option>
+        </select>
+        
+        <h3>Адаптивность</h3>
+        <select name="list3">
+           <option value="adpt1"> выберите пункт... </option>    
+           <option value="adpt2"> adpt2 </option>
+        </select>
+        
+        <p> <b>Сроки</b> 0 </p> 
+        <p> <b>Стоимость</b> 0 </p>
+        
+    </div></div>
+    
+    
+    
+    <div class="stat">  <div class="stat_tittle">
+        <h2>Немного статистики</h2>
+        <ul>
+            <li> <b>120</b> <p>счастливых клиентов</p> </li>
+            <li> <b>4 600</b> <p>часов работы</p></li>
+            <li> <b>340</b> <p>проектов завершено</p></li>
+            <li> <b>23</b> <p>наград получено</p></li>
+        </ul>
+    </div> </div>
+    
+    
+     
+     
+    
+    <div class="feedBack"> <div class="FB_title">
+        <h2>Отзывы</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa totam vero vel accusamus eligendi consequatur ex quibusdam maiores quaerat, facere incidunt. Repellat, eaque numquam tenetur ullam sequi, delectus ipsam magni.</p>
+        <div class="mihail"> <p> <b>Михаил</b>, Гендиректор Газпром</p> </div>
+        <p> 
+              <input type="radio" name="radio">
+              <input type="radio" name="radio">
+              <input type="radio" name="radio">
+           </p>
+    </div></div>
+    
+    <footer>
+       <div class="info">  <div class="info_conteiner"> 
+        <h2>Мои контакты</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex corporis libero voluptatum voluptatem possimus amet?</p>
+        <ul> 
+            <li> <span>Санкт-Петербург <br>Невский проспект 11</span> </li> 
+            <li> <span>  info@mail.com</span> </li>
+            <li> <span>  7 999 999-99-99</span> </li>
+        </ul>
+        </div>
+        <div class="mes"> <p>Оставьте мне сообщение</p> </div>
+       <form action="massage">
+           <input type="text" name="name_input" value="" placeholder="Имя">
+           <input type="text" name="email_input" value="" placeholder="Email">
+           <p></p>
+           <textarea name="textarea" id="1" cols="30" rows="10" >
+           </textarea>
+           <p></p>
+           <div class="send" > <input type="reset" value="Отправить"> </div>
+       </form>
+       </div>
+    </footer>
+    <div class="cpright"> <h5>Copyright 2021 Андрей Браун. Design by Web</h5> </div>
+    
+    
+      <script>
+    window.onload = function () {
+      document.body.classList.add('loaded_hiding');
+      window.setTimeout(function () {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+      }, 500);
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
